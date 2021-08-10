@@ -1,0 +1,128 @@
+#button_0{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 49.3vmin;
+    left: 58.1vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_1{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 49.3vmin;
+    left: 64.1vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_2{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 49.3vmin;
+    left: 70.1vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_3{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 49.3vmin;
+    left: 76.1vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_4{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 49.3vmin;
+    left: 82vmin;
+    width: 5.7vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_5{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 53.58vmin;
+    left: 58.15vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_6{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 53.58vmin;
+    left: 64.15vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_7{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 53.58vmin;
+    left: 70.15vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_8{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 53.58vmin;
+    left: 76.15vmin;
+    width: 5.8vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+#button_9{
+    position: absolute;
+    color: rgba(0, 0, 0, 0.8);
+    top: 53.58vmin;
+    left: 82.15vmin;
+    width: 5.6vmin;
+    height: 4vmin;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vmin;
+    font-size: 4vmin;
+}
+
+.btn:hover{
+    background-color:rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.btn:active{
+    background-color:rgba(0, 0, 0, 0.3);
+}

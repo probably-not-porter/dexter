@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+  font-family: 'VT323', monospace;
+  user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+body{
+    background-image: url("../img/bg.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+#dex{
+    position: absolute;
+    background-image: url("../img/pokedex.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: contain; /* Resize the background image to cover the entire container */
+    height: 95vmin;
+    width: 95vmin;
+}
+#sprite{
+    position: absolute;
+    width: 29.8vmin;
+    height: 20vmin;
+    object-fit: contain;
+    border: none;
+    top: 34vmin;
+    left: 10vmin;
+  }
+#num{
+    position: absolute;
+    color: white;
+    top: 50.5vmin;
+    left: 11vmin;
+    font-size: 3vmin;
+}
+#name{
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 69.6vmin;
+    left: 12.8vmin;
+    width: 15vmin;
+    font-size: 2vmin;
+    color: #00EE00;
+}
