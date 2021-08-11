@@ -40,7 +40,7 @@ body{
   }
 #num{
     position: absolute;
-    color: white;
+    color: black;
     top: 50.5vmin;
     left: 11vmin;
     font-size: 3vmin;
@@ -84,8 +84,25 @@ body{
 }
 #search{
     position: absolute;
-    font-size: 2vmin;
-    color: white;
-    top: 35.8vmin;
+    font-size: 10vmin;
+    color: rgba(255,255,255,0.2);
+    top: 35vmin;
     left: 58vmin;
+    text-align: center;
+    height: 10vmin;
+    width: 29vmin;
+}
+#height{
+    position: absolute;
+    font-size: 1.5vmin;
+    color: white;
+    top: 72vmin;
+    left: 13.5vmin;
+}
+#weight{
+    position: absolute;
+    font-size: 1.5vmin;
+    color: white;
+    top: 73.5vmin;
+    left: 13.5vmin;
 }

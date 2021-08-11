@@ -11,10 +11,14 @@ function load_by_num(n){
             var img = data["sprites"]["other"]["official-artwork"]["front_default"];
             var name = data["name"];
             var types = data["types"];
+            var height = data["height"];
+            var weight = data["weight"];
 
             document.getElementById("sprite").src = img;
             document.getElementById("num").innerText = "#" + n;
             document.getElementById("name").innerText = name.replace(/\b\w/g, l => l.toUpperCase());
+            document.getElementById("height").innerText = (Math.round(height / 10)).toFixed(1) + " meters";
+            document.getElementById("weight").innerText = (Math.round(weight / 10)).toFixed(1) + " kilograms";
 
             // types
             let type1 = document.getElementById("type1");
