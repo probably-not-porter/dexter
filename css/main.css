@@ -55,3 +55,33 @@ body{
     font-size: 2vmin;
     color: #00EE00;
 }
+#type1{
+    position: absolute;
+    text-align: center;
+    font-size: 1.8vmin;
+    top: 70.55vmin;
+    left: 57.45vmin;
+    width: 13.65vmin;
+    height: 4.5vmin;
+    border-radius: 0.5vmin;
+    border: 2px solid black;
+}
+#type2{
+    position: absolute;
+    text-align: center;
+    font-size: 1.8vmin;
+    top: 70.55vmin;
+    left: 73.8vmin;
+    width: 13.65vmin;
+    height: 4.5vmin;
+    border-radius: 0.5vmin;
+    border: 2px solid black;
+}
+.type .slot{
+    width: 13.65vmin;
+    background-color: black;
+    color: white;
+}
+.type .name{
+
+}
