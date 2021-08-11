@@ -129,3 +129,12 @@ body{
     top: 73.5vmin;
     left: 13.5vmin;
 }
+#flavor{
+    position: absolute;
+    font-size: 1.5vmin;
+    color: white;
+    top: 36.3vmin;
+    left: 58vmin;
+    height: 10vmin;
+    width: 29vmin;
+}

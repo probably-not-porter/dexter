@@ -39,7 +39,40 @@ function load_by_num(n){
             }
 
         });
+        $.getJSON('https://pokeapi.co/api/v2/pokemon-species/' + n, function(data) {
+            console.log(data);
+            document.getElementById("flavor").innerText = "";
+            let flavor = null;
+            let x = 0;
+            while (flavor == null){
+                if (data["flavor_text_entries"][x]["language"]["name"] == "en"){
+                    flavor = data["flavor_text_entries"][x]["flavor_text"].replace(/(\r\n|\n|\r)/gm, " ");;
+                }else{
+                    x++;
+                }
+            }
+            setTimeout(function(){
+                display_char(0, flavor, document.getElementById("flavor"));
+            }, 5);
+        }); 
+        
     }
 }
+
+function display_char(n, s, el){
+    if (n < s.length){
+        if (s[n] == " "){
+            el.innerText += s[n] + s[n+1];
+            n = n + 1
+        }else{
+            el.innerText += s[n];
+        }
+        setTimeout(function(){
+            display_char(n+1, s, el);
+        }, 15);
+    }
+
+}
+
 load_by_num(1);
 
