@@ -82,6 +82,10 @@ body{
     background-color: black;
     color: white;
 }
-.type .name{
-
+#search{
+    position: absolute;
+    font-size: 2vmin;
+    color: white;
+    top: 35.8vmin;
+    left: 58vmin;
 }
