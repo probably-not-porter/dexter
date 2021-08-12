@@ -1,7 +1,8 @@
-const current_entry = 1;
+var current_entry = 1;
 
 
 function load_by_num(n){
+    current_entry = n;
     if (n < 0 || n > 898){
         console.error("PKMN does not exist.");
     }else{

@@ -118,6 +118,64 @@
     line-height: 4vmin;
     font-size: 4vmin;
 }
+#button_next{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    top: 65.8vmin;
+    left: 41vmin;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4vmin;
+}
+#button_next:hover{
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+#button_prev{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    top: 65.8vmin;
+    left: 32.8vmin;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4vmin;
+}
+#button_prev:hover{
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+#button_next_10{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    top: 69vmin;
+    left: 36.7vmin;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4vmin;
+}
+#button_next_10:hover{
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+#button_prev_10{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    top: 62.5vmin;
+    left: 36.7vmin;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 4vmin;
+}
+#button_prev_10:hover{
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+
+
+
+
+
 
 .btn:hover{
     background-color:rgba(0, 0, 0, 0.1);
@@ -126,3 +184,4 @@
 .btn:active{
     background-color:rgba(0, 0, 0, 0.3);
 }
+
