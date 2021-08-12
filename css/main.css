@@ -138,3 +138,15 @@ body{
     height: 10vmin;
     width: 29vmin;
 }
+
+#load_light{
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    top: 55.65vmin;
+    left: 12.75vmin;
+    height: 3.5vmin;
+    width: 3.5vmin;
+    border-radius: 50%;
+
+    box-shadow: 0px 0px 40px 20px #faa;
+}
