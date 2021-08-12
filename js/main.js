@@ -46,12 +46,13 @@ function load_by_num(n){
             let x = 0;
             while (flavor == null){
                 if (data["flavor_text_entries"][x]["language"]["name"] == "en"){
-                    flavor = data["flavor_text_entries"][x]["flavor_text"].replace(/(\r\n|\n|\r)/gm, " ");;
+                    flavor = data["flavor_text_entries"][x]["flavor_text"].replace(/(\r\n|\n|\r)/gm, " ").replace(/[\u000C]/g,' ');
                 }else{
                     x++;
                 }
             }
             setTimeout(function(){
+                console.log(flavor);
                 display_char(0, flavor, document.getElementById("flavor"));
             }, 5);
         }); 
