@@ -1,7 +1,8 @@
 var current_entry = 1;
-
+var search_block = false;
 
 function load_by_num(n){
+    search_block = true;
     current_entry = n;
     if (n < 0 || n > 898){
         console.error("PKMN does not exist.");
@@ -69,7 +70,9 @@ function display_char(n, s, el){
         }
         setTimeout(function(){
             display_char(n+1, s, el);
-        }, 15);
+        }, 5);
+    }else{
+        search_block = false;
     }
 
 }

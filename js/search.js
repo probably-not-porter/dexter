@@ -1,4 +1,4 @@
-var search_block = false;
+
 
 $( document ).ready(function() {
     document.getElementById('button_0').addEventListener('click', function (event) {
@@ -77,15 +77,12 @@ $( document ).ready(function() {
 function check_search(){
     let search = document.getElementById("search").innerText;
     if (search.length > 2){
-        search_block = true;
         if (parseInt(search) > 898 || parseInt(search) < 1){
             document.getElementById("search").innerText = "ERR"
         }
         setTimeout(function(){
             document.getElementById("search").innerText = "";
-            search_block = false;
-        }, 1000);
-        
+        }, 500);
         load_by_num(parseInt(search));
     }
 }
