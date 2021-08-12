@@ -26,6 +26,8 @@ body{
     width: 70px;
     height: 70px;
     cursor: pointer;
+    right: 10px;
+    top: 10px;
 }
 #kofi img{
     margin-left: 3px;
