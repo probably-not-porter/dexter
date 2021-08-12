@@ -3,7 +3,7 @@ const current_entry = 1;
 
 function load_by_num(n){
     if (n < 0 || n > 898){
-        console.log("ERROR");
+        console.error("PKMN does not exist.");
     }else{
         $.getJSON('https://pokeapi.co/api/v2/pokemon/' + n, function(data) {
             console.info(data);
@@ -40,7 +40,6 @@ function load_by_num(n){
 
         });
         $.getJSON('https://pokeapi.co/api/v2/pokemon-species/' + n, function(data) {
-            console.log(data);
             document.getElementById("flavor").innerText = "";
             let flavor = null;
             let x = 0;
@@ -52,7 +51,6 @@ function load_by_num(n){
                 }
             }
             setTimeout(function(){
-                console.log(flavor);
                 display_char(0, flavor, document.getElementById("flavor"));
             }, 5);
         }); 
