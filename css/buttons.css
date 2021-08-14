@@ -121,10 +121,9 @@
 #button_next{
     position: absolute;
     color: rgba(255, 255, 255, 0.5);
-    top: 65.8vmin;
+    top: 65.5vmin;
     left: 41vmin;
     text-align: center;
-    vertical-align: middle;
     font-size: 4vmin;
 }
 #button_next:hover{
@@ -134,10 +133,9 @@
 #button_prev{
     position: absolute;
     color: rgba(255, 255, 255, 0.5);
-    top: 65.8vmin;
+    top: 65.5vmin;
     left: 32.8vmin;
     text-align: center;
-    vertical-align: middle;
     font-size: 4vmin;
 }
 #button_prev:hover{
@@ -150,7 +148,6 @@
     top: 69vmin;
     left: 36.7vmin;
     text-align: center;
-    vertical-align: middle;
     font-size: 4vmin;
 }
 #button_next_10:hover{
@@ -163,7 +160,6 @@
     top: 62.5vmin;
     left: 36.7vmin;
     text-align: center;
-    vertical-align: middle;
     font-size: 4vmin;
 }
 #button_prev_10:hover{

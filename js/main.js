@@ -1,13 +1,16 @@
 var current_entry = 1;
+var info_page = 1;
 var search_block = false;
 
 function load_by_num(n){
-    search_block = true;
+    
     document.getElementById("load_light").style.visibility = "visible"; // show loading light
     current_entry = n;
     if (n < 0 || n > 898){
         console.error("PKMN does not exist.");
+        document.getElementById("load_light").style.visibility = "hidden"; // hide loading light
     }else{
+        search_block = true;
         $.getJSON('https://pokeapi.co/api/v2/pokemon/' + n, function(data) {
             console.info(data);
 
