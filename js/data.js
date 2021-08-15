@@ -1,4 +1,11 @@
-const color_conv = {
+/*
+    Dexter - Functional Gen 1 Dex
+    Porter Libby
+
+    Data Arrays - important conversions
+*/
+
+const color_conv = { // display color for each type
     "normal": "#A8A77A",
     "grass": "#7AC74C",
     "poison": "#A33EA1",

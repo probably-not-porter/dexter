@@ -10,7 +10,6 @@ var info_page = 1; // keep track of what information is being displayed on the r
 var search_block = false; // false means new information can be rendered, true means new information cant be rendered
 
 function load_by_num(n){
-    
     document.getElementById("load_light").style.visibility = "visible"; // show loading light
     current_entry = n;
     if (n < 0 || n > 898){
@@ -52,7 +51,6 @@ function load_by_num(n){
                     type2.innerHTML = "<div class='slot'>TYPE 2</div>" + "<span class='name'>" + types[x]["type"]["name"].replace(/\b\w/g, l => l.toUpperCase()) + "</span>"
                 }
             }
-
         });
         // get additional information like dex description
         $.getJSON('https://pokeapi.co/api/v2/pokemon-species/' + n, function(data) {
@@ -70,7 +68,6 @@ function load_by_num(n){
                 display_char(0, flavor, document.getElementById("flavor"));
             }, 5);
         }); 
-        
     }
 }
 
@@ -89,7 +86,7 @@ function display_char(n, s, el){ // recursively display text
         search_block = false;
         document.getElementById("load_light").style.visibility = "hidden"; // hide loading light
     }
-
 }
+
 $( document ).ready(function() { load_by_num(1); }); // load bulbasaur on startup
 
