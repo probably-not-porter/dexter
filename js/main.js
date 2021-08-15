@@ -1,16 +1,25 @@
-var current_entry = 1;
-var info_page = 1;
-var search_block = false;
+/*
+    Dexter - Functional Gen 1 Dex
+    Porter Libby
+
+    Main functions - controls API loading, sequential text display.
+*/
+
+var current_entry = 1; // keep track of what pokemon is currently being displayed
+var info_page = 1; // keep track of what information is being displayed on the right screen
+var search_block = false; // false means new information can be rendered, true means new information cant be rendered
 
 function load_by_num(n){
     
     document.getElementById("load_light").style.visibility = "visible"; // show loading light
     current_entry = n;
     if (n < 0 || n > 898){
-        console.error("PKMN does not exist.");
+        console.error("PKMN does not exist."); // number does not fit within current index of pokemon
         document.getElementById("load_light").style.visibility = "hidden"; // hide loading light
     }else{
-        search_block = true;
+        search_block = true; // block search from being performed until current is complete
+
+        // get main pokemon information
         $.getJSON('https://pokeapi.co/api/v2/pokemon/' + n, function(data) {
             console.info(data);
 
@@ -45,6 +54,7 @@ function load_by_num(n){
             }
 
         });
+        // get additional information like dex description
         $.getJSON('https://pokeapi.co/api/v2/pokemon-species/' + n, function(data) {
             document.getElementById("flavor").innerText = "";
             let flavor = null;
@@ -64,7 +74,7 @@ function load_by_num(n){
     }
 }
 
-function display_char(n, s, el){
+function display_char(n, s, el){ // recursively display text
     if (n < s.length){
         if (s[n] == " "){
             el.innerText += s[n] + s[n+1];
@@ -73,7 +83,7 @@ function display_char(n, s, el){
             el.innerText += s[n];
         }
         setTimeout(function(){
-            display_char(n+1, s, el);
+            display_char(n+1, s, el); // recur
         }, 5);
     }else{
         search_block = false;
@@ -81,5 +91,5 @@ function display_char(n, s, el){
     }
 
 }
-$( document ).ready(function() { load_by_num(1); });
+$( document ).ready(function() { load_by_num(1); }); // load bulbasaur on startup
 
