@@ -1,4 +1,12 @@
+/*
+    Dexter - Functional Gen 1 Dex
+    Porter Libby
+
+    Nav Functions - button events for navigation within the dex
+*/
+
 $( document ).ready(function() {
+    // step forward one dex number
     document.getElementById('button_next').addEventListener('click', function (event) {
         if (search_block == false){
             if (current_entry + 1 < 899){
@@ -8,6 +16,7 @@ $( document ).ready(function() {
             }
         }
     });
+    // step forward ten dex numbers
     document.getElementById('button_next_10').addEventListener('click', function (event) {
         if (search_block == false){
             if (current_entry + 10 < 899){
@@ -17,6 +26,7 @@ $( document ).ready(function() {
             }
         }
     });
+    // step back one dex number
     document.getElementById('button_prev').addEventListener('click', function (event) {
         if (search_block == false){
             if (current_entry - 1 > 0){
@@ -26,6 +36,7 @@ $( document ).ready(function() {
             }
         }
     });
+    // step back ten dex numbers
     document.getElementById('button_prev_10').addEventListener('click', function (event) {
         if (search_block == false){
             if (current_entry - 10 > 0){
