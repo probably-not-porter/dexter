@@ -12,7 +12,7 @@ var search_block = false; // false means new information can be rendered, true m
 function load_by_num(n){
     document.getElementById("load_light").style.visibility = "visible"; // show loading light
     current_entry = n;
-    if (n < 0 || n > 898){
+    if (n < 0 || n > 999){
         console.error("PKMN does not exist."); // number does not fit within current index of pokemon
         document.getElementById("load_light").style.visibility = "hidden"; // hide loading light
     }else{
