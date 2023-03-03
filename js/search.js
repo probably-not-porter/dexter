@@ -82,13 +82,15 @@ $( document ).ready(function() {
 
 function check_search(){ // checks to see if search is complete 3-digit (001, 121, 032)
     let search = document.getElementById("search").innerText;
-    if (search.length > 2){
-        if (parseInt(search) > 898 || parseInt(search) < 1){
+    if (search.length == DEX_COUNT.toString().length){
+        if (parseInt(search) > DEX_COUNT || parseInt(search) < 1){
             document.getElementById("search").innerText = "ERR" // if pokemon does not exist, display ERR
+        }
+        else{
+            load_by_num(parseInt(search)); // load search integer (dex num)
         }
         setTimeout(function(){
             document.getElementById("search").innerText = "";
         }, 500);
-        load_by_num(parseInt(search)); // load search integer (dex num)
     }
 }

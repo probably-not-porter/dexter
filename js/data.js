@@ -5,6 +5,8 @@
     Data Arrays - important conversions
 */
 
+const DEX_COUNT = 1008;
+
 const color_conv = { // display color for each type
     "normal": "#A8A77A",
     "grass": "#7AC74C",

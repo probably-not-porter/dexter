@@ -12,12 +12,12 @@ var search_block = false; // false means new information can be rendered, true m
 function load_by_num(n){
     document.getElementById("load_light").style.visibility = "visible"; // show loading light
     current_entry = n;
-    if (n < 0 || n > 999){
+    if (n < 0 || n > DEX_COUNT){
         console.error("PKMN does not exist."); // number does not fit within current index of pokemon
         document.getElementById("load_light").style.visibility = "hidden"; // hide loading light
     }else{
         search_block = true; // block search from being performed until current is complete
-
+        console.log('https://pokeapi.co/api/v2/pokemon/' + n)
         // get main pokemon information
         $.getJSON('https://pokeapi.co/api/v2/pokemon/' + n, function(data) {
             console.info(data);
@@ -52,17 +52,25 @@ function load_by_num(n){
                 }
             }
         });
-        // get additional information like dex description
+        // get additional information like dex description\
+        console.log('https://pokeapi.co/api/v2/pokemon-species/' + n)
         $.getJSON('https://pokeapi.co/api/v2/pokemon-species/' + n, function(data) {
+            console.log(data);
             document.getElementById("flavor").innerText = "";
             let flavor = null;
             let x = 0;
             while (flavor == null){
-                if (data["flavor_text_entries"][x]["language"]["name"] == "en"){
-                    flavor = data["flavor_text_entries"][x]["flavor_text"].replace(/(\r\n|\n|\r)/gm, " ").replace(/[\u000C]/g,' ');
-                }else{
-                    x++;
+                try{
+                    if (data["flavor_text_entries"][x]["language"]["name"] == "en"){
+                        flavor = data["flavor_text_entries"][x]["flavor_text"].replace(/(\r\n|\n|\r)/gm, " ").replace(/[\u000C]/g,' ');
+                    }
+                }catch{
+                    flavor = "No information for this Pokemon yet!"
                 }
+                
+
+                x++;
+                
             }
             setTimeout(function(){
                 display_char(0, flavor, document.getElementById("flavor"));
