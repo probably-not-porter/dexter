@@ -15,7 +15,7 @@ html, body{
     overflow: hidden;
 }
 body{
-    background-image: url("../img/bg.png");
+    background-image: url("../img/bg.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
