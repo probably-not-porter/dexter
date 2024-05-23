@@ -5,7 +5,13 @@
     Data Arrays - important conversions
 */
 
-const DEX_COUNT = 1008;
+var DEX_COUNT = 1;
+$( document ).ready(function() {
+    $.getJSON('https://pokeapi.co/api/v2/pokemon-species/', function(data) {
+            DEX_COUNT = parseInt(data.count);
+    });
+});
+
 
 const color_conv = { // display color for each type
     "normal": "#A8A77A",
